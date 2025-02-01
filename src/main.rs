@@ -3,7 +3,7 @@ use teloxide::prelude::*;
 #[tokio::main]
 async fn main() {
     let bot = Bot::from_env();
-
+    
     teloxide::repl(bot, |bot: Bot, msg: Message| async move {
         if let Some(text) = msg.text() {
             if text == "/dice" {
