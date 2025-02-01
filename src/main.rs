@@ -16,7 +16,6 @@ enum Command {
 
 #[tokio::main]
 async fn main() {
-    // Получаем токен из переменной окружения TELOXIDE_TOKEN
     let bot = Bot::from_env();
 
     teloxide::repl(bot, |bot: Bot, msg: Message| async move {
